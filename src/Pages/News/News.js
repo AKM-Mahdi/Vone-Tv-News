@@ -3,11 +3,10 @@ import { useLoaderData } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 import { FaShareAlt, FaRegBookmark } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const News = () => {
   const newsDetails = useLoaderData();
-  const { _id, title, author, details, total_view, image_url } = newsDetails;
+  const { title, author, details, total_view, image_url } = newsDetails;
   console.log(newsDetails);
   return (
     <div>
