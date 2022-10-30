@@ -7,7 +7,7 @@ const LeftSideNav = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/category-item").then((res) =>
+    fetch("https://vone-tv.vercel.app/category-item").then((res) =>
       res.json().then((data) => setCategories(data))
     );
   }, []);
