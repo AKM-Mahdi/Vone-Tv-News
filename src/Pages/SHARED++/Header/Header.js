@@ -45,7 +45,7 @@ const Header = () => {
                       <Image
                         roundedCircle
                         style={{ height: "35px" }}
-                        src={user?.photoURL}
+                        src={user.photoURL}
                       ></Image>
                     ) : (
                       <FaUserCircle></FaUserCircle>
@@ -53,7 +53,9 @@ const Header = () => {
                   }
                   id="collasible-nav-dropdown"
                 >
-                  <NavDropdown.Item>{user?.displayName}</NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/profile">{user?.displayName}</Link>
+                  </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item onClick={handleSignOut}>
                     Sign Out
@@ -62,16 +64,19 @@ const Header = () => {
               </Nav>
             ) : (
               <Nav className="me-end">
-                <Nav.Link>
-                  <Link className="text-light" to={"/login"}>
-                    Login
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="text-light" to={"/register"}>
-                    Register
-                  </Link>
-                </Nav.Link>
+                <Link
+                  className="text-light mx-2 text-decoration-none"
+                  to={"/login"}
+                >
+                  Login
+                </Link>
+
+                <Link
+                  className="text-light text-decoration-none"
+                  to={"/register"}
+                >
+                  Register
+                </Link>
               </Nav>
             )}
 

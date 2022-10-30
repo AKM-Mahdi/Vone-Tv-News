@@ -4,13 +4,21 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCClb9boehx4dQygzmONrrAO8xL5l74hyU",
+//   authDomain: "vone-tv.firebaseapp.com",
+//   projectId: "vone-tv",
+//   storageBucket: "vone-tv.appspot.com",
+//   messagingSenderId: "982041833930",
+//   appId: "1:982041833930:web:9dec58dbfa7c054b965f33",
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyCClb9boehx4dQygzmONrrAO8xL5l74hyU",
-  authDomain: "vone-tv.firebaseapp.com",
-  projectId: "vone-tv",
-  storageBucket: "vone-tv.appspot.com",
-  messagingSenderId: "982041833930",
-  appId: "1:982041833930:web:9dec58dbfa7c054b965f33",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

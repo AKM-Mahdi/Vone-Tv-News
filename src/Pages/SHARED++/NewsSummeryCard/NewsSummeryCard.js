@@ -39,12 +39,12 @@ const NewsSummeryCard = ({ news }) => {
           <Card.Title className="mt-3">{title}</Card.Title>
           <Card.Text>
             {details.length > 200 ? (
-              <p>
+              <>
                 {details.slice(0, 200)}{" "}
                 <Link to={`/news/${_id}`}> read more</Link>
-              </p>
+              </>
             ) : (
-              <p>{details}</p>
+              <>{details}</>
             )}
           </Card.Text>
         </Card.Body>
